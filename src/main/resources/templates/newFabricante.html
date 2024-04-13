@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Nuevo Fabricante</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+  </head>
+  <body>
+    <h1>Nuevo Fabricante</h1>
+    <form
+      action="#"
+      th:action="@{/fabricantes}"
+      th:object="${fabricante}"
+      method="post"
+    >
+      <p>Nombre: <input type="text" th:field="*{nombre}" /></p>
+      <p><input type="submit" value="Enviar a Alejandro" /></p>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="fabricante : ${fabricantes}">
+          <td th:text="${fabricante.nombre}"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
