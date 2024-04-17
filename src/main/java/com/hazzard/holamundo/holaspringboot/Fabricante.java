@@ -5,7 +5,7 @@ import jakarta.persistence.GenerationType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@jakarta.persistence.Entity
+@Entity
 public class Fabricante {
   private static final Logger logger = LoggerFactory.getLogger(Fabricante.class);
   @Id

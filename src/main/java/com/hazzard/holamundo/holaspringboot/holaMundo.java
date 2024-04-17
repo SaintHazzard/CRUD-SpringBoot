@@ -48,7 +48,7 @@ public class holaMundo {
   @GetMapping("/fabricantes/new")
   public ModelAndView newFabricante() {
     ModelAndView mav = new ModelAndView("newFabricante");
-    mav.addObject("fabricante", new Fabricante()); // Cambiado "Fabricante" a "fabricante"
+    mav.addObject("fabricante", new Fabricante());
     mav.addObject("fabricantes", fabricanteService.getAllFabricantes());
     return mav;
   }
